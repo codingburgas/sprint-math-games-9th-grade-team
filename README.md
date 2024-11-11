@@ -1,7 +1,6 @@
 # RPG Math Game
 
-![Game Logo](https://via.placeholder.com/150) <!-- Replace with your game logo URL -->
-
+![image](https://github.com/user-attachments/assets/2766eaf5-6216-4cff-b4d6-ddebeafb5d6e)
 ## Description
 
 Welcome to **RPG Math Game**, an exciting adventure where players enhance their math skills while battling monsters and completing quests! This game combines the elements of role-playing games (RPGs) with fun math challenges that will keep players engaged and learning.
