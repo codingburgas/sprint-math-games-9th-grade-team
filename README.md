@@ -1,5 +1,5 @@
-# RPG Math Game ![image (1)](https://github.com/user-attachments/assets/84255752-007a-4335-a650-64601b110fe1)
-
+# RPG Math Game 
+![image (1)](https://github.com/user-attachments/assets/84255752-007a-4335-a650-64601b110fe1)
 
 
 ## Description
