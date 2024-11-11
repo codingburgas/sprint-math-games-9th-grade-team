@@ -16,6 +16,17 @@ Welcome to **RPG Math Game**, an exciting adventure where players enhance their 
 
 ![Gameplay Screenshot](https://via.placeholder.com/600x300) <!-- Replace with your gameplay screenshot URL -->
 
-## Installation
+ [!NOTE]
+> Highlights information that users should take into account, even when skimming.
 
-To install the RPG Math Game, follow these steps:
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
