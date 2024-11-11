@@ -18,7 +18,3 @@ Welcome to **RPG Math Game**, an exciting adventure where players enhance their 
 ## Installation
 
 To install the RPG Math Game, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/rpg-math-game.git
