@@ -16,7 +16,7 @@ Welcome to **RPG Math Game**, an exciting adventure where players enhance their 
 
 ![Gameplay Screenshot](https://via.placeholder.com/600x300) <!-- Replace with your gameplay screenshot URL -->
 
-> [!NOTE]
+> [!INFO]
 > Highlights information that users should take into account, even when skimming.
 
 > [!TIP]
