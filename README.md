@@ -1,2 +1,1 @@
-# MATH RPG
-###### hello and smt...
+# MATH RPG ###### (beta)
