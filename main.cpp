@@ -40,7 +40,7 @@ mainmenu: {
         }
     case(5): {
         system("CLS");
-        goto mainmenu;
+        goto mainmenu; // exit to main menu
     }
 
 
