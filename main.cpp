@@ -1,76 +1,109 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 int main() {
 mainmenu: {
-    cout << "Main menu" << endl;
-    cout << "1. Play" << endl;
-    cout << "\n2. About us" << endl;
-    cout << "\n3. Leaderboard" << endl;
-    cout << " " << endl;
+    // Simple ASCII Art Header for Main Menu
+    cout << "        <=-=================================================================================================-=>" << endl;
+    cout << endl;
+    cout << "          ____    ____        _        _________   ____  ____       _______      _______      ______   " << endl;
+    cout << "         |_   \\  /   _|      / \\      |  _   _  | |_   ||   _|     |_   __ \\    |_   __ \\   .' ___  |  " << endl;
+    cout << "           |   \\/   |       / _ \\     |_/ | | \\_|   | |__| |         | |__) |     | |__) | / .'   \\_|  " << endl;
+    cout << "           | |\\  /| |      / ___ \\        | |       |  __  |         |  __ /      |  ___/  | |   ____  " << endl;
+    cout << "          _| |_\\/_| |_   _/ /   \\ \\_     _| |_     _| |  | |_       _| |  \\ \\_   _| |_     \\ `.___]  | " << endl;
+    cout << "         |_____||_____| |____| |____|   |_____|   |____||____|     |____| |___| |_____|     `._____.'  " << endl;
+    cout << endl;
+    cout << endl;
+    cout << "        <=-=================================================================================================-=>" << endl;
+    cout << endl;
+    cout << "                                      ,--.   ,--. ,------. ,--.  ,--. ,--. ,--.  " << endl;
+    cout << "                                      |   `.'   | |  .---' |  ,'.|  | |  | |  |   " << endl;
+    cout << "                                      |  |'.'|  | |  `--,  |  |' '  | |  | |  |  " << endl;
+    cout << "                                      |  |   |  | |  `---. |  | `   | '  '-'  '  " << endl;
+    cout << "                                      `--'   `--' `------' `--'  `--'  `-----'   " << endl;
+
+
+    cout << endl;
+    cout << "                                                \033[32m - 1. PLAY\033[0m" << endl;
+    cout << "                                                \033[31m - 2. ABOUT US\033[0m" << endl;
+    cout << "                                                \033[33m - 3. LEADERBOARD\033[0m" << endl;
+    cout << endl;
+
+    cout << "        <=-=================================================================================================-=>" << endl;
+    cout << endl;
+
+    cout << "                                             \033[36m< | > Choose an option : \033[0m";
+
     int mainchoose;
     do {
         cin >> mainchoose;
     } while (mainchoose != 1 && mainchoose != 2 && mainchoose != 3);
 
-    switch (mainchoose) {  // choosing options
-    case(1): {
+    switch (mainchoose) {
+    case 1: {
         system("CLS");
-        cout << "CHOOSE YOUR LEVEL:" << endl;
+        cout << "\n======================================" << endl;
+        cout << "         Choose Your Level           " << endl;
+        cout << "======================================" << endl;
         cout << "\n1. EASY" << endl;
-        cout << "\n2. MEDIUM" << endl;
-        cout << "\n3. HARD" << endl;
-        cout << "\n4. How To Play:" << endl;
-        cout << "\nType 5 to exit to main menu : " << endl;
+        cout << "2. MEDIUM" << endl;
+        cout << "3. HARD" << endl;
+        cout << "4. How To Play" << endl;
+        cout << "5. Return to Main Menu" << endl;
+        cout << "======================================" << endl;
+        cout << "Choose an option: ";
+
         int gamechoose;
-        cin >> gamechoose;
-        while (gamechoose != 1 && gamechoose != 2 && gamechoose != 3 && gamechoose != 4 && gamechoose != 5) {
+        do {
             cin >> gamechoose;
-        }
+        } while (gamechoose < 1 || gamechoose > 5);
+
         switch (gamechoose) {
-        case(1): {
-            cout << "easy"; // easy
+        case 1: cout << "\n*** Easy Level Selected ***\n"; break;
+        case 2: cout << "\n*** Medium Level Selected ***\n"; break;
+        case 3: cout << "\n*** Hard Level Selected ***\n"; break;
+        case 4: cout << "\n*** How to Play Instructions ***\n"; break;
+        case 5: system("CLS"); goto mainmenu;
         }
-        case(2): {
-            cout << "easy";// medium
-        }
-        case(3): {
-            cout << "easy";// hard
-        }
-        }
-    case(5): {
-        system("CLS");
-        goto mainmenu; // exit to main menu
+        break;
     }
-
-
-
-           break;
-    }
-    case(2): {
+    case 2: {
         system("CLS");
-        cout << "About us" << endl;
-        cout << "Our team:" << endl;
-        cout << "\nOur team is comprised of some very masterful individuals:" << endl;
-        cout << "\nMartin:  our scum trainer and leader;" << endl;
-        cout << "\nDenis: our backend developer;" << endl;
-        cout << "\nStelian: one of our designers and frontend developer;" << endl;
-        cout << "\nStanimir: one of our designers and tester." << endl;
-        cout << "Type 5 to exit to main menu: ";
+        cout << "\n======================================" << endl;
+        cout << "              About Us               " << endl;
+        cout << "======================================" << endl;
+        cout << "Our team is comprised of talented individuals:" << endl;
+        cout << "- Martin: Scum Trainer and Leader" << endl;
+        cout << "- Denis: Backend Developer" << endl;
+        cout << "- Stelian: Designer & Frontend Developer" << endl;
+        cout << "- Stanimir: Designer & Tester" << endl;
+        cout << "======================================" << endl;
+        cout << "Type 5 to return to Main Menu: ";
+
         int choose;
-        cin >> choose;
-        while (choose != 5) {
+        do {
             cin >> choose;
-        }
+        } while (choose != 5);
+
         system("CLS");
         goto mainmenu;
-
-        break;
     }
-    case(3): {
+    case 3: {
         system("CLS");
-        cout << "How to play";
-        break;
+        cout << "\n======================================" << endl;
+        cout << "            Leaderboard               " << endl;
+        cout << "======================================" << endl;
+        cout << "Here you will see the top players!" << endl;
+        cout << "======================================" << endl;
+        cout << "Type 5 to return to Main Menu: ";
+
+        int choose;
+        do {
+            cin >> choose;
+        } while (choose != 5);
+
+        system("CLS");
         goto mainmenu;
     }
     }
