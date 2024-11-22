@@ -7,8 +7,8 @@
 
 ## Features
 
-- **⚔Engaging Gameplay**: Solve math problems to defeat enemies and progress through waves.
-- **🌊Wave system**: Explore various worlds, each with increasing difficulty.
+<h1>- **⚔Engaging Gameplay**: Solve math problems to defeat enemies and progress through waves. </h1>
+<h1>- **🌊Wave system**: Explore various worlds, each with increasing difficulty. </h1>
 
 ![Gameplay Screenshot](https://via.placeholder.com/600x300) 
 
