@@ -2,8 +2,7 @@
 ![image (1)](https://github.com/user-attachments/assets/84255752-007a-4335-a650-64601b110fe1)
 
 Programs used:
-![png-clipart-visual-studio-logo-icon-tech-companies](https://github.com/user-attachments/assets/dfb6c56e-4e88-4b84-bc1a-06428dbf0d44)
-
+<img src="https://github.com/user-attachments/assets/dfb6c56e-4e88-4b84-bc1a-06428dbf0d44" width="100" height="100" />
 
 <h1>-Description-</h1>
 
