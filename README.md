@@ -2,8 +2,7 @@
 ![image (1)](https://github.com/user-attachments/assets/84255752-007a-4335-a650-64601b110fe1)
 
 Programs used:
-icons/VisualStudio-Dark.svg
-
+[icons/VisualStudio-Dark.svg](https://raw.githubusercontent.com/username/repository/main/path/to/icon.png)
 
 <h1>-Description-</h1>
 
