@@ -1,6 +1,8 @@
-# Math RPG
-![image (1)](https://github.com/user-attachments/assets/84255752-007a-4335-a650-64601b110fe1)
+<div align="center">
 
+# Math RPG
+
+![image (1)](https://github.com/user-attachments/assets/84255752-007a-4335-a650-64601b110fe1)
 <h2>Programs used: </h2>
  - Visual studio 2022 
  - Teams 
@@ -25,3 +27,5 @@ Welcome to RPG Math Game, an exciting adventure where players enhance their math
 
 > [!WARNING]
 > # The game is still in "BETA" so there may be some bugs!
+
+</div>
