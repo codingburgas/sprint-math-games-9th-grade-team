@@ -3,7 +3,7 @@
 
 Programs used:
 
-<img src="https://docs.microsoft.com/media/logos/logo_MSTeams.svg" width="35" height="35" />
+<img src="https://docs.microsoft.com/media/logos/logo_MSTeams.svg" width="35" height="35" />, <img src="https://upload.wikimedia.org/wikipedia/en/5/58/Discord_logo.svg" width="35" height="35" />
 <h1>-Description-</h1>
 
 Welcome to RPG Math Game, an exciting adventure where players enhance their math skills while battling monsters and completing quests! This game combines the elements of role-playing games (RPGs) with fun math challenges that will keep players engaged and learning. </h3>
