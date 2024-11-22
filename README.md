@@ -2,9 +2,7 @@
 ![image (1)](https://github.com/user-attachments/assets/84255752-007a-4335-a650-64601b110fe1)
 
 Programs used:
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="50" height="50">
-    <path fill="#007ACC" d="M64 0L0 64l64 64 64-64L64 0zm0 116L8 64l56-56v112zm0-112l56 56-56 56V4z"/>
-</svg><h1>-Description-</h1>
+![Visual Studio Logo](https://raw.githubusercontent.com/username/repository/main/path/to/visual-studio-logo.svg)
 
 <h3>   Welcome to RPG Math Game, an exciting adventure where players enhance their math skills while battling monsters and completing quests! This game combines the elements of role-playing games (RPGs) with fun math challenges that will keep players engaged and learning. </h3>
 
