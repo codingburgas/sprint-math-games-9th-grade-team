@@ -3,7 +3,7 @@
 
 ## Description
 
-Welcome to **RPG Math Game**, an exciting adventure where players enhance their math skills while battling monsters and completing quests! This game combines the elements of role-playing games (RPGs) with fun math challenges that will keep players engaged and learning. 
+<h1>Welcome to **RPG Math Game**, an exciting adventure where players enhance their math skills while battling monsters and completing quests! This game combines the elements of role-playing games (RPGs) with fun math challenges that will keep players engaged and learning. </h1>
 
 ## Features
 
