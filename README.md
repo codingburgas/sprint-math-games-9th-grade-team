@@ -4,6 +4,7 @@
 Programs used:
 
 <img src="https://github.com/user-attachments/assets/dfb6c56e-4e88-4b84-bc1a-06428dbf0d44" width="35" height="35" />
+![Microsoft-Teams-Icon-PNG](https://github.com/user-attachments/assets/2fea8fc9-4fca-4bdb-88d1-de953fcb9c2a)
 
 <h1>-Description-</h1>
 
