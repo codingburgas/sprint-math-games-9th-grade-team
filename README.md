@@ -1,13 +1,13 @@
 # Math RPG
 ![image (1)](https://github.com/user-attachments/assets/84255752-007a-4335-a650-64601b110fe1)
 
-Programs used:
- - Visual studio 2022
- - Teams
- - Discord
- - Clion
+<h2>Programs used: </h2>
+ - Visual studio 2022 
+ - Teams 
+ - Discord 
+ - Clion 
 
-Programming language:
+<h2>Programming language: </h2>
  - C++
 <h1>-Description-</h1>
 
