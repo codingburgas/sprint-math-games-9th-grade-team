@@ -14,3 +14,7 @@
 - **🌊Wave system**: Explore various worlds, each with increasing difficulty.
 - **🗡Weapon selection**: Choose between different weapons with different abilities.
 - **👑Leaderboard**: Try reaching the top of the leaderboard to show everyone how smart you are!
+
+
+> [!WARNING]
+> The game is still in "BETA" so there may be some bugs!
