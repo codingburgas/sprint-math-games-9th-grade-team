@@ -3,7 +3,7 @@
 
 Programs used:
 
-<img src="https://github.com/user-attachments/assets/dfb6c56e-4e88-4b84-bc1a-06428dbf0d44" width="50" height="50" />
+<img src="https://github.com/user-attachments/assets/dfb6c56e-4e88-4b84-bc1a-06428dbf0d44" width="35" height="35" />
 
 <h1>-Description-</h1>
 
