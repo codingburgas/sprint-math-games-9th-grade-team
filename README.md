@@ -13,3 +13,4 @@
 - **⚔Engaging Gameplay**: Solve math problems to defeat enemies and progress through waves. 
 - **🌊Wave system**: Explore various worlds, each with increasing difficulty.
 - **🗡Weapon selection**: Choose between different weapons with different abilities.
+- **👑Leaderboard**: Try reaching the top of the leaderboard to show everyone how smart you are!
