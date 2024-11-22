@@ -3,7 +3,6 @@
 
 Programs used:
 
-<img src="https://github.com/microsoft/vscode-icons/blob/main/icons/icon.svg" width="35" height="35" /> 
 <img src="https://docs.microsoft.com/media/logos/logo_MSTeams.svg" width="35" height="35" />
 <h1>-Description-</h1>
 
