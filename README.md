@@ -7,10 +7,8 @@ Welcome to **RPG Math Game**, an exciting adventure where players enhance their 
 
 ## Features
 
-- **Engaging Gameplay**: Solve math problems to defeat enemies and progress through waves.
-- **Character Customization**: Create and customize your character with unique abilities.
-- **Multiple Levels**: Explore various worlds, each with increasing difficulty.
-- **Rewards System**: Earn rewards for completing challenges and leveling up.
+- **⚔Engaging Gameplay**: Solve math problems to defeat enemies and progress through waves.
+- **🌊Wave system**: Explore various worlds, each with increasing difficulty.
 
-![Gameplay Screenshot](https://via.placeholder.com/600x300) <!-- Replace with your gameplay screenshot URL -->
+![Gameplay Screenshot](https://via.placeholder.com/600x300) 
 
