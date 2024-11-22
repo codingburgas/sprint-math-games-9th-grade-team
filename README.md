@@ -13,5 +13,3 @@
 - **⚔Engaging Gameplay**: Solve math problems to defeat enemies and progress through waves. 
 - **🌊Wave system**: Explore various worlds, each with increasing difficulty.
 
-![Gameplay Screenshot](https://via.placeholder.com/600x300) 
-
