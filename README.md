@@ -17,4 +17,4 @@
 
 
 > [!WARNING]
-> The game is still in "BETA" so there may be some bugs!
+> # The game is still in "BETA" so there may be some bugs!
