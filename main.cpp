@@ -5,26 +5,48 @@ using namespace std;
 
 void game(double levelMultiplier) {
     int waveCount = 10;
-    for (int waveCounter = 0; waveCounter < waveCount;) {
+    for (int waveCounter = 1; waveCounter < waveCount;) {
         double enemyHP = 100 * levelMultiplier, enemyDMG = 99 * levelMultiplier;
+        double miniBossHP = enemyHP * 1.5, miniBossDMG = enemyHP * 1.5;
+        double finalBossHP = miniBossHP * 2, finalBossDMG = miniBossDMG * 2;
         double playerHP = 100, playerDMG = 100;
+        bool miniBossWave, finalBossWave;
+        bool playerMiss;
+        int swrgn1 = rand() % 100;//generating random numbers for each case
+        int swrgn2 = rand() % 100;
+        int swrgn1Crit = rand() % 10;
+        int swrgn2Crit = rand() % 10;
+        int macergn1Crit = rand() % 100;
+        int macergn2Crit = rand() % 10;
+        int macergn1 = rand() % 10;
+        int macergn2 = rand() % 10;
         while (enemyHP > 0) {
             srand((unsigned)time(NULL));
             int counter = 0, answer, rightAnswer, critAnswer, critRightAnswer;
             char exitChar;
-            int swrgn1 = rand() % 100;//generating random numbers for each case
-            int swrgn2 = rand() % 100;
-            int swrgn1Crit = rand() % 10;
-            int swrgn2Crit = rand() % 10;
-            int macergn1Crit = rand() % 100;
-            int macergn2Crit = rand() % 10;
-            int macergn1 = rand() % 10;
-            int macergn2 = rand() % 10;
             int chooseWpn;
+            if (waveCounter == 5) {
+                cout << "Wave 5" << endl;
+                cout << "Mini Boss!" << endl;
+                miniBossWave = true;
+                finalBossWave = false;
+            }
+            if (waveCounter == 10) {
+                cout << "Wave 10" << endl;
+                cout << "Final Boss!" << endl;
+                miniBossWave = false;
+                finalBossWave = true;
+            }
+            else {
+                cout << "Wave " << waveCounter << endl;
+                miniBossWave = false;
+                finalBossWave = false;
+            }
             cout << "Choose your weapon" << endl;
             cout << "1. Sword" << endl;
             cout << "2. Mace" << endl;
-            cout << "3. What each weapon does" << endl;
+            cout << "3. Check stats" << endl;
+            cout << "4. What each weapon does" << endl;
             cin >> chooseWpn;
             system("CLS");
             switch (chooseWpn) {
@@ -33,7 +55,7 @@ void game(double levelMultiplier) {
                 cout << "You chose sword, so..." << endl;
                 cout << "You have 3 tries!" << endl;
                 cout << "Solve this: " << swrgn1 << " + " << swrgn2 << endl;
-                cout << "Type here your answer: ";
+                cout << "Type your answer here: ";
                 rightAnswer = swrgn1 + swrgn2;
 
                 do {
@@ -43,59 +65,177 @@ void game(double levelMultiplier) {
                         cout << "Wrong answer!" << endl;//adding if to output either try or tries
                         if (3 - counter == 1) {
                             cout << "1 try left!" << endl;
+                            cout << "Type your answer here: ";
                         }
                         else if (3 - counter != 1) {
                             cout << 3 - counter << " tries left" << endl;
+                            cout << "Type your answer here: ";
+                        }
+                        else if (answer != rightAnswer && counter == 3) {
+                            break;
                         }
                     }
                 } while (answer != rightAnswer && counter < 3);
-
-                if (answer == rightAnswer && counter == 1) {
-                    cout << "Perfect!" << endl;
-                    cout << "Now's your chance to do critical damage!" << endl;
-                    cout << swrgn1Crit << " * " << swrgn2Crit << endl;
-                    cout << "Type here your answer: ";
-                    critRightAnswer = swrgn1Crit * swrgn2Crit;
-                    cin >> critAnswer;
-
-                    if (critAnswer == critRightAnswer) {
+                if (miniBossWave == false && finalBossWave == false) {
+                    if (answer == rightAnswer && counter == 1) {
                         cout << "Perfect!" << endl;
-                        enemyHP -= playerDMG * 1.5;
-                        cout << "Enemy HP == " << enemyHP << endl;
+                        cout << "Now's your chance to do critical damage!" << endl;
+                        cout << swrgn1Crit << " * " << swrgn2Crit << endl;
+                        cout << "Type your answer here: ";
+                        critRightAnswer = swrgn1Crit * swrgn2Crit;
+                        cin >> critAnswer;
+
+                        if (critAnswer == critRightAnswer) {
+                            cout << "Perfect!" << endl;
+                            enemyHP -= playerDMG * 1.5;
+                            cout << "Enemy HP == " << enemyHP << endl;
+                            playerMiss = false;
+                        }
+                        else {
+                            cout << "You didn't get it, but you got a hit" << endl;
+                            enemyHP -= playerDMG;
+                            cout << "Enemy HP == " << enemyHP << endl;
+                            playerMiss = false;
+                        }
                     }
-                    else {
-                        cout << "You didn't get it, but you got a hit" << endl;
+                    else if (answer == rightAnswer) {
+                        cout << "Good hit!" << endl;
                         enemyHP -= playerDMG;
                         cout << "Enemy HP == " << enemyHP << endl;
+                        playerMiss = false;
+                    }
+                    else {
+                        cout << "You missed an attack!" << endl;
+                        playerHP -= enemyDMG;
+                        cout << "Your HP == " << playerHP << endl;
+                        playerMiss = true;
+                    }
+
+                    if (enemyHP <= 0) {
+                        system("CLS");
+                        cout << "Enemy HP == " << enemyHP << endl;
+                        cout << "Wave cleared!" << endl;
+                        waveCounter++;
+                        break;
+                    }
+                    else if (enemyHP > 0 && playerMiss == false) {
+                        cout << "Enemy turn!" << endl;
+                        cout << "-" << enemyDMG << endl;
+                        playerHP -= enemyDMG;
+                        cout << "Your HP == " << playerHP << endl;
                     }
                 }
-                else if (answer == rightAnswer) {
-                    cout << "Good hit!" << endl;
-                    enemyHP -= playerDMG;
-                    cout << "Enemy HP == " << enemyHP << endl;
-                }
-                else {
-                    cout << "You missed an attack!" << endl;
-                    playerHP -= enemyDMG;
-                    cout << "Your HP == " << playerHP << endl;
-                }
+                else if (miniBossWave == true) {
+                    if (answer == rightAnswer && counter == 1) {
+                        cout << "Perfect!" << endl;
+                        cout << "Now's your chance to do critical damage!" << endl;
+                        cout << swrgn1Crit << " * " << swrgn2Crit << endl;
+                        cout << "Type your answer here: ";
+                        critRightAnswer = swrgn1Crit * swrgn2Crit;
+                        cin >> critAnswer;
 
-                if (enemyHP <= 0) {
-                    system("CLS");
-                    cout << "Wave cleared!";
-                    waveCounter++;
-                    break;
-                }
+                        if (critAnswer == critRightAnswer) {
+                            cout << "Perfect!" << endl;
+                            miniBossHP -= playerDMG * 1.5;
+                            cout << "Enemy HP == " << miniBossHP << endl;
+                            playerMiss = false;
+                        }
+                        else {
+                            cout << "You didn't get it, but you got a hit" << endl;
+                            miniBossHP -= playerDMG;
+                            cout << "Enemy HP == " << miniBossHP << endl;
+                            playerMiss = false;
+                        }
+                    }
+                    else if (answer == rightAnswer) {
+                        cout << "Good hit!" << endl;
+                        miniBossHP -= playerDMG;
+                        cout << "Enemy HP == " << miniBossHP << endl;
+                        playerMiss = false;
+                    }
+                    else {
+                        cout << "You missed an attack!" << endl;
+                        playerHP -= miniBossDMG;
+                        cout << "Your HP == " << playerHP << endl;
+                        playerMiss = true;
+                    }
 
+                    if (miniBossHP <= 0) {
+                        system("CLS");
+                        cout << "Enemy HP == " << miniBossHP << endl;
+                        cout << "Wave cleared!" << endl;
+                        waveCounter++;
+                        break;
+                    }
+                    else if (miniBossHP > 0 && playerMiss == false) {
+                        cout << "Enemy turn!" << endl;
+                        cout << "-" << miniBossDMG << endl;
+                        playerHP -= miniBossDMG;
+                        cout << "Your HP == " << playerHP << endl;
+                        system("CLS");
+                    }
+                }
+                else if (finalBossWave == true) {
+                    if (answer == rightAnswer && counter == 1) {
+                        cout << "Perfect!" << endl;
+                        cout << "Now's your chance to do critical damage!" << endl;
+                        cout << swrgn1Crit << " * " << swrgn2Crit << endl;
+                        cout << "Type your answer here: ";
+                        critRightAnswer = swrgn1Crit * swrgn2Crit;
+                        cin >> critAnswer;
+
+                        if (critAnswer == critRightAnswer) {
+                            cout << "Perfect!" << endl;
+                            finalBossHP -= playerDMG * 1.5;
+                            cout << "Enemy HP == " << finalBossHP << endl;
+                            playerMiss = false;
+                        }
+                        else {
+                            cout << "You didn't get it, but you got a hit" << endl;
+                            finalBossHP -= playerDMG;
+                            cout << "Enemy HP == " << finalBossHP << endl;
+                            playerMiss = false;
+                        }
+                    }
+                    else if (answer == rightAnswer) {
+                        cout << "Good hit!" << endl;
+                        finalBossHP -= playerDMG;
+                        cout << "Enemy HP == " << finalBossHP << endl;
+                        playerMiss = false;
+                    }
+                    else {
+                        cout << "You missed an attack!" << endl;
+                        playerHP -= finalBossDMG;
+                        cout << "Your HP == " << playerHP << endl;
+                        playerMiss = true;
+                    }
+
+                    if (finalBossHP <= 0) {
+                        system("CLS");
+                        cout << "Enemy HP == " << finalBossHP << endl;
+                        cout << "Wave cleared!" << endl;
+                        waveCounter++;
+                        break;
+                    }
+                    else if (finalBossHP > 0 && playerMiss == false) {
+                        cout << "Enemy turn!" << endl;
+                        cout << "-" << finalBossDMG << endl;
+                        playerHP -= finalBossDMG;
+                        cout << "Your HP == " << playerHP << endl;
+                        system("CLS");
+                    }
+                }
                 if (playerHP <= 0) {
-                    cout << "You Lose! Type anything to return to main menu!" << endl;
+                    cout << "You Lose! Type r to return to main menu!" << endl;
+                    waveCounter = 10;
                     cin >> exitChar;
-
-                    if (exitChar != '\0') {
-                        waveCounter = 10;
+                    if (exitChar == 'r') {
                         system("CLS");
                         break;
                     }
+                }
+                else if (playerHP > 0) {
+                    break;
                 }
 
 
@@ -104,66 +244,196 @@ void game(double levelMultiplier) {
                 cout << "You chose mace, and..." << endl;
                 cout << "You have 2 tries!" << endl;
                 cout << "Solve this: " << macergn1 << " * " << macergn2 << endl;
-                cout << "Type here your answer: ";
+                cout << "Type your answer here: ";
                 rightAnswer = macergn1 * macergn2;
                 do {
                     cin >> answer;
                     counter++;
                     if (answer != rightAnswer) {
                         cout << "Wrong answer!" << endl;
+                        cout << "1 try left!";
                     }
-                } while (answer != rightAnswer && counter < 2);
-
-                if (answer == rightAnswer && counter == 1) {
-                    cout << "Perfect!" << endl;
-                    cout << "Now's your chance to do critical damage!" << endl;
-                    cout << macergn1Crit << " * " << macergn2Crit << endl;
-                    cout << "Type here your answer: ";
-                    critRightAnswer = macergn1Crit * macergn2Crit;
-                    cin >> critAnswer;
-
-                    if (critAnswer == critRightAnswer) {
-                        cout << "Perfect!" << endl;
-                        enemyHP -= playerDMG * 4;
-                        cout << "Enemy HP == " << enemyHP << endl;
-                    }
-                    else {
-                        cout << "You didn't get it, but you still got a hit" << endl;
-                        enemyHP -= playerDMG * 1.5;
-                        cout << "Enemy HP == " << enemyHP << endl;
-                    }
-                }
-                else if (answer == rightAnswer) {
-                    cout << "Good hit!" << endl;
-                    enemyHP -= playerDMG * 1.5;
-                    cout << "Enemy HP == " << enemyHP << endl;
-                }
-                else {
-                    cout << "You missed an attack!" << endl;
-                    playerHP -= enemyDMG;
-                    cout << "Your HP == " << playerHP << endl;
-                }
-
-                if (enemyHP <= 0) {
-                    system("CLS");
-                    cout << "Wave cleared!";
-                    waveCounter++;
-                    break;
-                }
-
-                if (playerHP <= 0) {
-                    cout << "You Lose! Type anything to return to main menu!" << endl;
-                    cin >> exitChar;
-
-                    if (exitChar != '\0') {
-                        waveCounter = 10;
-                        system("CLS");
+                    else if (answer != rightAnswer && counter == 2) {
                         break;
                     }
 
+                } while (answer != rightAnswer && counter < 2);
+                if (miniBossWave == false && finalBossWave == false) {
+                    if (answer == rightAnswer && counter == 1) {
+                        cout << "Perfect!" << endl;
+                        cout << "Now's your chance to do critical damage!" << endl;
+                        cout << macergn1Crit << " * " << macergn2Crit << endl;
+                        cout << "Type your answer here: ";
+                        critRightAnswer = macergn1Crit * macergn2Crit;
+                        cin >> critAnswer;
+
+                        if (critAnswer == critRightAnswer) {
+                            cout << "Perfect!" << endl;
+                            enemyHP -= playerDMG * 4;
+                            cout << "Enemy HP == " << enemyHP << endl;
+                            playerMiss = false;
+                        }
+                        else {
+                            cout << "You didn't get it, but you got a hit" << endl;
+                            enemyHP -= playerDMG * 1.5;
+                            cout << "Enemy HP == " << enemyHP << endl;
+                            playerMiss = false;
+                        }
+                    }
+                    else if (answer == rightAnswer) {
+                        cout << "Good hit!" << endl;
+                        enemyHP -= playerDMG * 1.5;
+                        cout << "Enemy HP == " << enemyHP << endl;
+                        playerMiss = false;
+                    }
+                    else {
+                        cout << "You missed an attack!" << endl;
+                        playerHP -= enemyDMG;
+                        cout << "Your HP == " << playerHP << endl;
+                        playerMiss = true;
+                    }
+
+                    if (enemyHP <= 0) {
+                        system("CLS");
+                        cout << "Enemy HP == " << enemyHP << endl;
+                        cout << "Wave cleared!" << endl;
+                        waveCounter++;
+                        break;
+                    }
+                    else if (enemyHP > 0 && playerMiss == false) {
+                        cout << "Enemy turn!" << endl;
+                        cout << "-" << enemyDMG << endl;
+                        playerHP -= enemyDMG;
+                        cout << "Your HP == " << playerHP << endl;
+                        system("CLS");
+                    }
+                }
+                else if (miniBossWave == true) {
+                    if (answer == rightAnswer && counter == 1) {
+                        cout << "Perfect!" << endl;
+                        cout << "Now's your chance to do critical damage!" << endl;
+                        cout << macergn1Crit << " * " << macergn2Crit << endl;
+                        cout << "Type your answer here: ";
+                        critRightAnswer = macergn1Crit * macergn2Crit;
+                        cin >> critAnswer;
+
+                        if (critAnswer == critRightAnswer) {
+                            cout << "Perfect!" << endl;
+                            miniBossHP -= playerDMG * 4;
+                            cout << "Enemy HP == " << miniBossHP << endl;
+                            playerMiss = false;
+                        }
+                        else {
+                            cout << "You didn't get it, but you got a hit" << endl;
+                            miniBossHP -= playerDMG * 1.5;
+                            cout << "Enemy HP == " << miniBossHP << endl;
+                            playerMiss = false;
+                        }
+                    }
+                    else if (answer == rightAnswer) {
+                        cout << "Good hit!" << endl;
+                        miniBossHP -= playerDMG * 1.5;
+                        cout << "Enemy HP == " << miniBossHP << endl;
+                        playerMiss = false;
+                    }
+                    else {
+                        cout << "You missed an attack!" << endl;
+                        playerHP -= miniBossDMG;
+                        cout << "Your HP == " << playerHP << endl;
+                        playerMiss = true;
+                    }
+
+                    if (miniBossHP <= 0) {
+                        system("CLS");
+                        cout << "Enemy HP == " << miniBossHP << endl;
+                        cout << "Wave cleared!" << endl;
+                        waveCounter++;
+                        break;
+                    }
+                    else if (miniBossHP > 0 && playerMiss == false) {
+                        cout << "Enemy turn!" << endl;
+                        cout << "-" << miniBossDMG << endl;
+                        playerHP -= miniBossDMG;
+                        cout << "Your HP == " << playerHP << endl;
+                        system("CLS");
+                    }
+                }
+                else if (finalBossWave == true) {
+                    if (answer == rightAnswer && counter == 1) {
+                        cout << "Perfect!" << endl;
+                        cout << "Now's your chance to do critical damage!" << endl;
+                        cout << macergn1Crit << " * " << macergn2Crit << endl;
+                        cout << "Type your answer here: ";
+                        critRightAnswer = macergn1Crit * macergn2Crit;
+                        cin >> critAnswer;
+
+                        if (critAnswer == critRightAnswer) {
+                            cout << "Perfect!" << endl;
+                            finalBossHP -= playerDMG * 4;
+                            cout << "Enemy HP == " << finalBossHP << endl;
+                            playerMiss = false;
+                        }
+                        else {
+                            cout << "You didn't get it, but you got a hit" << endl;
+                            finalBossHP -= playerDMG * 1.5;
+                            cout << "Enemy HP == " << finalBossHP << endl;
+                            playerMiss = false;
+                        }
+                    }
+                    else if (answer == rightAnswer) {
+                        cout << "Good hit!" << endl;
+                        finalBossHP -= playerDMG * 1.5;
+                        cout << "Enemy HP == " << finalBossHP << endl;
+                        playerMiss = false;
+                    }
+                    else {
+                        cout << "You missed an attack!" << endl;
+                        playerHP -= finalBossDMG;
+                        cout << "Your HP == " << playerHP << endl;
+                        playerMiss = true;
+                    }
+
+                    if (finalBossHP <= 0) {
+                        system("CLS");
+                        cout << "Enemy HP == " << finalBossHP << endl;
+                        cout << "Wave cleared!" << endl;
+                        waveCounter++;
+                        break;
+                    }
+                    else if (finalBossHP > 0 && playerMiss == false) {
+                        cout << "Enemy turn!" << endl;
+                        cout << "-" << finalBossDMG << endl;
+                        playerHP -= finalBossDMG;
+                        cout << "Your HP == " << playerHP << endl;
+                        system("CLS");
+                    }
+                }
+                if (playerHP <= 0) {
+                    cout << "You Lose! Type r to return to main menu!" << endl;
+                    waveCounter = 10;
+                    cin >> exitChar;
+                    if (exitChar == 'r') {
+                        system("CLS");
+                        break;
+                    }
+                }
+                else if (playerHP > 0) {
+                    break;
                 }
             }
             case 3: {
+                system("CLS");
+                cout << "Your Health == " << playerHP << endl;
+                cout << "Enemy Damage == " << enemyDMG << endl;
+                cout << "Enemy Health == " << enemyHP << endl;
+                cout << "Type r to return to menu" << endl;
+                cin >> exitChar;
+                if (exitChar == 'r') {
+                    system("CLS");
+                    break;
+                }
+            }
+            case 4: {
                 system("CLS");
                 cout << "There are only 2 weapons to choose from" << endl;
                 cout << "Will you choose" << endl;
@@ -178,12 +448,17 @@ void game(double levelMultiplier) {
                 cout << "You will have to multiply two single digit numbers and it's base damage is the same as the sword's critical damage" << endl;
                 cout << "As for a critical, you will have to multiply a double digit number by a single digit number" << endl;
                 cout << "The critical multiplier is a whopping 4x" << endl;
-                cout << "Type anything to return to main menu" << endl;
+                cout << "Type r to return to menu" << endl;
                 cin >> exitChar;
-                if (exitChar != '\0') {
+                if (exitChar == 'r') {
                     system("CLS");
                     break;
                 }
+
+
+
+
+
             }
             }
             }
@@ -256,9 +531,10 @@ mainMenu: {
             game(2);
             goto mainMenu;
         }
-        case 4:
+        case 4: {
             cout << "\n*** How to Play Instructions ***\n";
             break;
+        }
         case 5:
             system("CLS");
             goto mainMenu;
@@ -276,12 +552,12 @@ mainMenu: {
         cout << "- Stelian: Designer & Frontend Developer" << endl;
         cout << "- Stanimir: Designer & Tester" << endl;
         cout << "======================================" << endl;
-        cout << "Type 5 to return to Main Menu: ";
+        cout << "Type r to return to Main Menu: ";
 
-        int choose;
+        char choose;
         do {
             cin >> choose;
-        } while (choose != 5);
+        } while (choose != 'r');
 
         system("CLS");
         goto mainMenu;
@@ -295,10 +571,10 @@ mainMenu: {
         cout << "======================================" << endl;
         cout << "Type 5 to return to Main Menu: ";
 
-        int choose;
+        char choose;
         do {
             cin >> choose;
-        } while (choose != 5);
+        } while (choose != 'r');
 
         system("CLS");
         goto mainMenu;
