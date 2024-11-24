@@ -1,61 +1,201 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
 using namespace std;
-void game(double levelmultiplier) {
-    int wavecount = 10;
-    for (int wavecounter = 0; wavecounter < wavecount;) {
-        double enemyHP = 100 * levelmultiplier, enemyDMG = 99 * levelmultiplier, playerHP = 100, playerDMG = 100;
+
+void game(double levelMultiplier) {
+    int waveCount = 10;
+    for (int waveCounter = 0; waveCounter < waveCount;) {
+        double enemyHP = 100 * levelMultiplier, enemyDMG = 99 * levelMultiplier;
+        double playerHP = 100, playerDMG = 100;
         while (enemyHP > 0) {
-            int timertime = 10;
-            int counter =    0, answer, rightanswer = 10;
-            char exitchar;
+            srand((unsigned)time(NULL));
+            int counter = 0, answer, rightAnswer, critAnswer, critRightAnswer;
+            char exitChar;
+            int swrgn1 = rand() % 100;//generating random numbers for each case
+            int swrgn2 = rand() % 100;
+            int swrgn1Crit = rand() % 10;
+            int swrgn2Crit = rand() % 10;
+            int macergn1Crit = rand() % 100;
+            int macergn2Crit = rand() % 10;
+            int macergn1 = rand() % 10;
+            int macergn2 = rand() % 10;
+            int chooseWpn;
+            cout << "Choose your weapon" << endl;
+            cout << "1. Sword" << endl;
+            cout << "2. Mace" << endl;
+            cout << "3. What each weapon does" << endl;
+            cin >> chooseWpn;
+            system("CLS");
+            switch (chooseWpn) {
+            case 1: {
+                system("CLS");
+                cout << "You chose sword, so..." << endl;
+                cout << "You have 3 tries!" << endl;
+                cout << "Solve this: " << swrgn1 << " + " << swrgn2 << endl;
+                cout << "Type here your answer: ";
+                rightAnswer = swrgn1 + swrgn2;
 
-            cout << "You have 3 try's" << endl;
-            cout << "Example!" << endl;
-            cout << "Type here your answer: ";
-            do {
-                cin >> answer;
-                counter++;
-                if (answer != rightanswer) {
-                    cout << "Wrong answer!" << endl;
+                do {
+                    cin >> answer;
+                    counter++;
+                    if (answer != rightAnswer) {
+                        cout << "Wrong answer!" << endl;//adding if to output either try or tries
+                        if (3 - counter == 1) {
+                            cout << "1 try left!" << endl;
+                        }
+                        else if (3 - counter != 1) {
+                            cout << 3 - counter << " tries left" << endl;
+                        }
+                    }
+                } while (answer != rightAnswer && counter < 3);
+
+                if (answer == rightAnswer && counter == 1) {
+                    cout << "Perfect!" << endl;
+                    cout << "Now's your chance to do critical damage!" << endl;
+                    cout << swrgn1Crit << " * " << swrgn2Crit << endl;
+                    cout << "Type here your answer: ";
+                    critRightAnswer = swrgn1Crit * swrgn2Crit;
+                    cin >> critAnswer;
+
+                    if (critAnswer == critRightAnswer) {
+                        cout << "Perfect!" << endl;
+                        enemyHP -= playerDMG * 1.5;
+                        cout << "Enemy HP == " << enemyHP << endl;
+                    }
+                    else {
+                        cout << "You didn't get it, but you got a hit" << endl;
+                        enemyHP -= playerDMG;
+                        cout << "Enemy HP == " << enemyHP << endl;
+                    }
                 }
-            }
-            while (answer != rightanswer && counter < 3);
+                else if (answer == rightAnswer) {
+                    cout << "Good hit!" << endl;
+                    enemyHP -= playerDMG;
+                    cout << "Enemy HP == " << enemyHP << endl;
+                }
+                else {
+                    cout << "You missed an attack!" << endl;
+                    playerHP -= enemyDMG;
+                    cout << "Your HP == " << playerHP << endl;
+                }
 
-            if (answer == rightanswer) { // 
-                cout << "Good hit!" << endl;
-                enemyHP = enemyHP - playerDMG;
-                cout << "Enemy HP  == " << enemyHP << endl;
-            }
-            else {
-                cout << "You missed an attack!" << endl << "-"; //enemy damage
-                playerHP = playerHP - enemyDMG;
-                cout << "Your Hp == " << playerHP << endl;
-
-            }
-                if (enemyHP <= 0) { //if you kill the enemy next wave starts
+                if (enemyHP <= 0) {
                     system("CLS");
-                    cout << "Wave cleared!"; 
-                    wavecounter++;
+                    cout << "Wave cleared!";
+                    waveCounter++;
                     break;
-
                 }
+
                 if (playerHP <= 0) {
-                    cout << "You Lose!, type anything to return to main menu!" << endl;
-                    cin >> exitchar;
-                    if (exitchar != '\0') { // exit to main menu
-                        wavecounter = 10;
+                    cout << "You Lose! Type anything to return to main menu!" << endl;
+                    cin >> exitChar;
+
+                    if (exitChar != '\0') {
+                        waveCounter = 10;
+                        system("CLS");
                         break;
                     }
                 }
-            
+
+
+            case 2: {
+                system("CLS");
+                cout << "You chose mace, and..." << endl;
+                cout << "You have 2 tries!" << endl;
+                cout << "Solve this: " << macergn1 << " * " << macergn2 << endl;
+                cout << "Type here your answer: ";
+                rightAnswer = macergn1 * macergn2;
+                do {
+                    cin >> answer;
+                    counter++;
+                    if (answer != rightAnswer) {
+                        cout << "Wrong answer!" << endl;
+                    }
+                } while (answer != rightAnswer && counter < 2);
+
+                if (answer == rightAnswer && counter == 1) {
+                    cout << "Perfect!" << endl;
+                    cout << "Now's your chance to do critical damage!" << endl;
+                    cout << macergn1Crit << " * " << macergn2Crit << endl;
+                    cout << "Type here your answer: ";
+                    critRightAnswer = macergn1Crit * macergn2Crit;
+                    cin >> critAnswer;
+
+                    if (critAnswer == critRightAnswer) {
+                        cout << "Perfect!" << endl;
+                        enemyHP -= playerDMG * 4;
+                        cout << "Enemy HP == " << enemyHP << endl;
+                    }
+                    else {
+                        cout << "You didn't get it, but you still got a hit" << endl;
+                        enemyHP -= playerDMG * 1.5;
+                        cout << "Enemy HP == " << enemyHP << endl;
+                    }
+                }
+                else if (answer == rightAnswer) {
+                    cout << "Good hit!" << endl;
+                    enemyHP -= playerDMG * 1.5;
+                    cout << "Enemy HP == " << enemyHP << endl;
+                }
+                else {
+                    cout << "You missed an attack!" << endl;
+                    playerHP -= enemyDMG;
+                    cout << "Your HP == " << playerHP << endl;
+                }
+
+                if (enemyHP <= 0) {
+                    system("CLS");
+                    cout << "Wave cleared!";
+                    waveCounter++;
+                    break;
+                }
+
+                if (playerHP <= 0) {
+                    cout << "You Lose! Type anything to return to main menu!" << endl;
+                    cin >> exitChar;
+
+                    if (exitChar != '\0') {
+                        waveCounter = 10;
+                        system("CLS");
+                        break;
+                    }
+
+                }
+            }
+            case 3: {
+                system("CLS");
+                cout << "There are only 2 weapons to choose from" << endl;
+                cout << "Will you choose" << endl;
+                cout << "The sword:" << endl;
+                cout << "It's the middle ground weapon, meaning it's neither strong nor weak" << endl;
+                cout << "You have to answer a simple two digit addition question" << endl;
+                cout << "For a critical, you will have to multiply two single digit numbers" << endl;
+                cout << "The critical multiplier is 1.5x" << endl;
+                cout << "Or" << endl;
+                cout << "The mace:" << endl;
+                cout << "As you can probably guess, it's the heavy weapon, meaning it's strong but it is harder to use" << endl;
+                cout << "You will have to multiply two single digit numbers and it's base damage is the same as the sword's critical damage" << endl;
+                cout << "As for a critical, you will have to multiply a double digit number by a single digit number" << endl;
+                cout << "The critical multiplier is a whopping 4x" << endl;
+                cout << "Type anything to return to main menu" << endl;
+                cin >> exitChar;
+                if (exitChar != '\0') {
+                    system("CLS");
+                    break;
+                }
+            }
+            }
+            }
         }
     }
-    
 }
 
+
+
+
 int main() {
-mainmenu: {
+mainMenu: {
     // Simple ASCII Art Header for Main Menu
     cout << "        <=-=================================================================================================-=>" << endl;
     cout << endl;
@@ -66,33 +206,22 @@ mainmenu: {
     cout << "          _| |_\\/_| |_   _/ /   \\ \\_     _| |_     _| |  | |_       _| |  \\ \\_   _| |_     \\ `.___]  | " << endl;
     cout << "         |_____||_____| |____| |____|   |_____|   |____||____|     |____| |___| |_____|     `._____.'  " << endl;
     cout << endl;
+    cout << "        <=-=================================================================================================-=>" << endl;
+    cout << endl;
+    cout << "                                              - 1. PLAY" << endl;
+    cout << "                                              - 2. ABOUT US" << endl;
+    cout << "                                              - 3. LEADERBOARD" << endl;
     cout << endl;
     cout << "        <=-=================================================================================================-=>" << endl;
     cout << endl;
-    cout << "                                      ,--.   ,--. ,------. ,--.  ,--. ,--. ,--.  " << endl;
-    cout << "                                      |   `.'   | |  .---' |  ,'.|  | |  | |  |   " << endl;
-    cout << "                                      |  |'.'|  | |  `--,  |  |' '  | |  | |  |  " << endl;
-    cout << "                                      |  |   |  | |  `---. |  | `   | '  '-'  '  " << endl;
-    cout << "                                      `--'   `--' `------' `--'  `--'  `-----'   " << endl;
+    cout << "                                             < | > Choose an option : ";
 
-
-    cout << endl;
-    cout << "                                                \033[32m - 1. PLAY\033[0m" << endl;
-    cout << "                                                \033[31m - 2. ABOUT US\033[0m" << endl;
-    cout << "                                                \033[33m - 3. LEADERBOARD\033[0m" << endl;
-    cout << endl;
-
-    cout << "        <=-=================================================================================================-=>" << endl;
-    cout << endl;
-
-    cout << "                                             \033[36m< | > Choose an option : \033[0m";
-
-    int mainchoose;
+    int mainChoose;
     do {
-        cin >> mainchoose;
-    } while (mainchoose != 1 && mainchoose != 2 && mainchoose != 3);
+        cin >> mainChoose;
+    } while (mainChoose != 1 && mainChoose != 2 && mainChoose != 3);
 
-    switch (mainchoose) {
+    switch (mainChoose) {
     case 1: {
         system("CLS");
         cout << "\n======================================" << endl;
@@ -106,26 +235,33 @@ mainmenu: {
         cout << "======================================" << endl;
         cout << "Choose an option: ";
 
-        int gamechoose;
+        int gameChoose;
         do {
-            cin >> gamechoose;
-        } while (gamechoose < 1 || gamechoose > 5);
+            cin >> gameChoose;
+        } while (gameChoose < 1 || gameChoose > 5);
 
-        switch (gamechoose) {
+        switch (gameChoose) {
         case 1: {
+            system("CLS");
             game(1);
-            goto mainmenu;
+            goto mainMenu;
         }
         case 2: {
+            system("CLS");
             game(1.5);
-            goto mainmenu;
+            goto mainMenu;
         }
         case 3: {
+            system("CLS");
             game(2);
-            goto mainmenu;
+            goto mainMenu;
         }
-        case 4: cout << "\n*** How to Play Instructions ***\n"; break;
-        case 5: system("CLS"); goto mainmenu;
+        case 4:
+            cout << "\n*** How to Play Instructions ***\n";
+            break;
+        case 5:
+            system("CLS");
+            goto mainMenu;
         }
         break;
     }
@@ -148,7 +284,7 @@ mainmenu: {
         } while (choose != 5);
 
         system("CLS");
-        goto mainmenu;
+        goto mainMenu;
     }
     case 3: {
         system("CLS");
@@ -165,7 +301,7 @@ mainmenu: {
         } while (choose != 5);
 
         system("CLS");
-        goto mainmenu;
+        goto mainMenu;
     }
     }
     }
