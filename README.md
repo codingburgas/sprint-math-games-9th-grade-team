@@ -2,7 +2,7 @@
 
 ![image (1)](https://github.com/user-attachments/assets/84255752-007a-4335-a650-64601b110fe1)
 <h2>-Coding programs used- </h2>
-  <h3><img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="VSCode" width="30" height="20"> VS Code </h3>
+  <h3><img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Visual_Studio_Icon_2022.svg" alt="VS2022" width="30" height="20"> VS 2022 </h3>
 
 <h2>-Communication programs used- </h2>
   <h3><img src="https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg" alt="Microsoft Teams" width="30" height="20"> Microsoft Teams </h3>
