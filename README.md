@@ -1,9 +1,12 @@
 # Math RPG
 
 ![image (1)](https://github.com/user-attachments/assets/84255752-007a-4335-a650-64601b110fe1)
-<h2>-Programs used- </h2>
+<h2>-Coding programs used- </h2>
   <h3><img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="VSCode" width="30" height="20"> VS Code </h3>
+
+<h2>-Communication programs used- </h2>
   <h3><img src="https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg" alt="Microsoft Teams" width="30" height="20"> Microsoft Teams </h3>
+  <h3><img src="https://cdn.worldvectorlogo.com/logos/discord-11.svg" alt="Discord" width="30" height="20"> Discord </h3>
 
 <h2>-Language used- </h2>
    <h3><img src="https://cdn.worldvectorlogo.com/logos/c.svg" alt="C++" width="50" height="50"> </h3>
