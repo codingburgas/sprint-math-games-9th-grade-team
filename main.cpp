@@ -292,7 +292,7 @@ void game(double levelMultiplier) {
                     cin >> exitChar;
                     if (exitChar == 'r') {
                         system("CLS");
-                        break;
+                        return;
                     }
                 }
                 else if (playerHP > 0) {
@@ -510,7 +510,7 @@ void game(double levelMultiplier) {
                     cin >> exitChar;
                     if (exitChar == 'r') {
                         system("CLS");
-                        break;
+                        return;
                     }
                 }
                 else if (playerHP > 0) {
