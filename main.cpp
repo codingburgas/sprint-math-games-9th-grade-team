@@ -26,32 +26,78 @@ void game(double levelMultiplier) {
             char exitChar;
             int chooseWpn;
             if (waveCounter == 5) {
-                cout << "Wave 5" << endl;
+                cout << endl;
+                cout << "                                                        \033[97;4mWave " << "5" << "\033[0m" << endl;
                 cout << "Mini Boss!" << endl;
                 miniBossWave = true;
                 finalBossWave = false;
             }
             if (waveCounter == 10) {
-                cout << "Wave 10" << endl;
+                cout << endl;
+                cout << "                                                        \033[97;4mWave " << "10" << "\033[0m" << endl;
                 cout << "Final Boss!" << endl;
                 miniBossWave = false;
                 finalBossWave = true;
             }
             else {
-                cout << "Wave " << waveCounter << endl;
+                cout << endl;
+                cout << "                                                        \033[97;4mWave " << waveCounter << "\033[0m" << endl;
                 miniBossWave = false;
                 finalBossWave = false;
             }
-            cout << "Choose your weapon" << endl;
-            cout << "1. Sword" << endl;
-            cout << "2. Mace" << endl;
-            cout << "3. Check stats" << endl;
-            cout << "4. What each weapon does" << endl;
+            cout << endl;
+            cout << "                                                  \033[93mCHOOSE YOUR WEAPON:\033[0m" << endl;
+            cout << "                                            \033[96m   ___________\033[0m" << "  \033[91m ___________\033[0m" << endl;
+            cout << "                                            \033[96m  | 1. Sword  |\033[0m" << " \033[91m|  2. Mace  |\033[0m" << endl;
+            cout << "                                            \033[96m  |___________|\033[0m" << " \033[91m|___________|\033[0m" << endl;
+            cout << "                                              \033[90m< 4. What each weapon does >\033[0m" << endl;
+            cout << endl;
+            cout << endl;
+            cout << endl;
+            cout << "                             _______" << "                                               _____" << endl;
+            cout << "                            /       \\" << "                                             /     \\" << endl;
+            cout << "                           |--0---0--|" << "                                           | () () |" << endl;
+            cout << "                           |    ^    |" << "                                           |   ^   |" << endl;
+            cout << "                           |   ---   |" << "                                            \\  ~  /" << endl;
+            cout << "                            \\_______/" << "                                              |||||" << endl;
+            cout << "                              |   |" << "                                                -----" << endl;
+            cout << "                            _/     \\_" << "                                           ___|   |___" << endl;
+            cout << "                      []___|         |___[]" << "                                 []__|         |___[]" << endl;
+            cout << "                           |_________|" << "                                          |_________|" << endl;
+            cout << "                             |     |" << "                                              |     |" << endl;
+            cout << "                             |     |" << "                                              |     |" << endl;
+            cout << "   \033[93m<0>\033[0m                       L     L" << "                     \033[91m<0>\033[0m                      V     V       \033[95m<0>\033[0m" << endl;
+            cout << "\033[92m____|_______________________________/\\_/\\_________________|________/\\______/\\____________________|______________________\033[0m" << endl;
+            cout << endl;
+            cout << endl;
+            cout << endl;
+            cout << "                                                  \033[32m< 3. Check stats >\033[0m" << endl;
             cin >> chooseWpn;
             system("CLS");
             switch (chooseWpn) {
             case 1: {
                 system("CLS");
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << "                             _______" << "                                               _____" << endl;
+                cout << "                            /       \\" << "                                             /     \\" << endl;
+                cout << "                           |--0---0--|" << "                                           | () () |" << endl;
+                cout << "                           |    ^    |" << "                                           |   ^   |" << endl;
+                cout << "                           |   ---   |" << "                                            \\  ~  /" << endl;
+                cout << "                            \\_______/" << "                                              |||||" << endl;
+                cout << "                              |   |" << "                                                -----" << endl;
+                cout << "                            _/     \\_" << "                                           ___|   |___" << endl;
+                cout << "                      []___|         |___[]" << "                                 []__|         |___[]" << endl;
+                cout << "                           |_________|" << "                                          |_________|" << endl;
+                cout << "                             |     |" << "                                              |     |" << endl;
+                cout << "                             |     |" << "                                              |     |" << endl;
+                cout << "   \033[93m<0>\033[0m                       L     L" << "                     \033[91m<0>\033[0m                      V     V       \033[95m<0>\033[0m" << endl;
+                cout << "\033[92m____|_______________________________/\\_/\\_________________|________/\\______/\\____________________|______________________\033[0m" << endl;
                 cout << "You chose sword, so..." << endl;
                 cout << "You have 3 tries!" << endl;
                 cout << "Solve this: " << swrgn1 << " + " << swrgn2 << endl;
@@ -226,7 +272,22 @@ void game(double levelMultiplier) {
                     }
                 }
                 if (playerHP <= 0) {
-                    cout << "You Lose! Type r to return to main menu!" << endl;
+                    system("CLS");
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << "                                           \033[91;4mYou Lose! Type r to return to main menu!\033[0m" << endl;
+                    cout << "                                                               ";
                     waveCounter = 10;
                     cin >> exitChar;
                     if (exitChar == 'r') {
@@ -241,6 +302,27 @@ void game(double levelMultiplier) {
 
             case 2: {
                 system("CLS");
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << "                             _______" << "                                               _____" << endl;
+                cout << "                            /       \\" << "                                             /     \\" << endl;
+                cout << "                           |--0---0--|" << "                                           | () () |" << endl;
+                cout << "                           |    ^    |" << "                                           |   ^   |" << endl;
+                cout << "                           |   ---   |" << "                                            \\  ~  /" << endl;
+                cout << "                            \\_______/" << "                                              |||||" << endl;
+                cout << "                              |   |" << "                                                -----" << endl;
+                cout << "                            _/     \\_" << "                                           ___|   |___" << endl;
+                cout << "                      []___|         |___[]" << "                                 []__|         |___[]" << endl;
+                cout << "                           |_________|" << "                                          |_________|" << endl;
+                cout << "                             |     |" << "                                              |     |" << endl;
+                cout << "                             |     |" << "                                              |     |" << endl;
+                cout << "   \033[93m<0>\033[0m                       L     L" << "                     \033[91m<0>\033[0m                      V     V       \033[95m<0>\033[0m" << endl;
+                cout << "\033[92m____|_______________________________/\\_/\\_________________|________/\\______/\\____________________|______________________\033[0m" << endl;
                 cout << "You chose mace, and..." << endl;
                 cout << "You have 2 tries!" << endl;
                 cout << "Solve this: " << macergn1 << " * " << macergn2 << endl;
@@ -409,7 +491,21 @@ void game(double levelMultiplier) {
                     }
                 }
                 if (playerHP <= 0) {
-                    cout << "You Lose! Type r to return to main menu!" << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << endl;
+                    cout << "                                           \033[91;4mYou Lose! Type r to return to main menu!\033[0m" << endl;
+                    cout << "                                                               ";
                     waveCounter = 10;
                     cin >> exitChar;
                     if (exitChar == 'r') {
@@ -423,10 +519,32 @@ void game(double levelMultiplier) {
             }
             case 3: {
                 system("CLS");
-                cout << "Your Health == " << playerHP << endl;
-                cout << "Enemy Damage == " << enemyDMG << endl;
-                cout << "Enemy Health == " << enemyHP << endl;
-                cout << "Type r to return to menu" << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << "                                            ___________________________________" << endl;
+                cout << "                                           |   Your Health == " << playerHP << "              |" << endl;
+                cout << "                                           |   Enemy Damage == " << enemyDMG << "              |" << endl;
+                cout << "                                           |   Enemy Health == " << enemyHP << "             |" << endl;
+                cout << "                                           |                                   |" << endl;
+                cout << "                                           |                                   |" << endl;
+                cout << "                                           |    Type r to return to menu" << "       |" << endl;
+                cout << "                                           |___________________________________|" << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
                 cin >> exitChar;
                 if (exitChar == 'r') {
                     system("CLS");
@@ -435,20 +553,29 @@ void game(double levelMultiplier) {
             }
             case 4: {
                 system("CLS");
-                cout << "There are only 2 weapons to choose from" << endl;
-                cout << "Will you choose" << endl;
-                cout << "The sword:" << endl;
-                cout << "It's the middle ground weapon, meaning it's neither strong nor weak" << endl;
-                cout << "You have to answer a simple two digit addition question" << endl;
-                cout << "For a critical, you will have to multiply two single digit numbers" << endl;
-                cout << "The critical multiplier is 1.5x" << endl;
-                cout << "Or" << endl;
-                cout << "The mace:" << endl;
-                cout << "As you can probably guess, it's the heavy weapon, meaning it's strong but it is harder to use" << endl;
-                cout << "You will have to multiply two single digit numbers and it's base damage is the same as the sword's critical damage" << endl;
-                cout << "As for a critical, you will have to multiply a double digit number by a single digit number" << endl;
-                cout << "The critical multiplier is a whopping 4x" << endl;
-                cout << "Type r to return to menu" << endl;
+                cout << endl;
+                cout << endl;
+                cout << "  \033[43m                                     \033[0m  \033[93mThere are only 2 weapons to choose from\033[0m \033[43m                                   \033[0m" << endl;
+                cout << endl;
+                cout << "            \033[90mWill you choose\033[0m" << endl;
+                cout << "                                                   \033[96m-The sword-\033[0m" << endl;
+                cout << "        \033[46m  \033[0m             \033[36mIt's the middle ground weapon, meaning it's neither strong nor weak.\033[0m" << endl;
+                cout << "        \033[46m  \033[0m            \033[36mYou have to answer a simple two digit addition question.\033[0m" << endl;
+                cout << "        \033[46m  \033[0m            \033[36mFor a critical, you will have to multiply two single digit numbers.\033[0m" << endl;
+                cout << "        \033[46m  \033[0m            \033[36mThe critical multiplier is 1.5x.\033[0m" << endl;
+                cout << endl;
+                cout << "            \033[90mOr\033[0m" << endl;
+                cout << "                                                   \033[91m-The mace-\033[0m" << endl;
+                cout << "        \033[41m  \033[0m           \033[31mAs you can probably guess, it's the heavy weapon, meaning it's strong but it is harder to use.\033[0m" << endl;
+                cout << "        \033[41m  \033[0m        \033[31mYou will have to multiply two single digit numbers and it's base damage is the same\033[0m" << endl;
+                cout << "        \033[41m  \033[0m        \033[31mas the sword's critical damage.  " << endl;
+                cout << "        \033[41m  \033[0m        \033[31mAs for a critical, you will have to multiply a double digit number by a single digit number.\033[0m" << endl;
+                cout << "        \033[41m  \033[0m        \033[31mThe critical multiplier is a whopping 4x.\033[0m" << endl;
+                cout << "        \033[41m  \033[0m        \033[31mType r to return to menu.\033[0m" << endl;
+                cout << endl;
+                cout << endl;
+                cout << endl;
+                cout << "            \033[90mPress 'r' to return:  \033[0m";
                 cin >> exitChar;
                 if (exitChar == 'r') {
                     system("CLS");
@@ -471,44 +598,66 @@ void game(double levelMultiplier) {
 
 int main() {
 mainMenu: {
-    // Simple ASCII Art Header for Main Menu
-    cout << "        <=-=================================================================================================-=>" << endl;
     cout << endl;
-    cout << "          ____    ____        _        _________   ____  ____       _______      _______      ______   " << endl;
-    cout << "         |_   \\  /   _|      / \\      |  _   _  | |_   ||   _|     |_   __ \\    |_   __ \\   .' ___  |  " << endl;
-    cout << "           |   \\/   |       / _ \\     |_/ | | \\_|   | |__| |         | |__) |     | |__) | / .'   \\_|  " << endl;
-    cout << "           | |\\  /| |      / ___ \\        | |       |  __  |         |  __ /      |  ___/  | |   ____  " << endl;
-    cout << "          _| |_\\/_| |_   _/ /   \\ \\_     _| |_     _| |  | |_       _| |  \\ \\_   _| |_     \\ `.___]  | " << endl;
-    cout << "         |_____||_____| |____| |____|   |_____|   |____||____|     |____| |___| |_____|     `._____.'  " << endl;
+    cout << "        \033[106m                                                                                                       \033[0m" << endl;
     cout << endl;
-    cout << "        <=-=================================================================================================-=>" << endl;
+    cout << "\033[1;35m         |    ____    ____        _        _________   ____  ____       _______      _______      ______     |   " << endl;
+    cout << "         |   |_   \\  /   _|      / \\      |  _   _  | |_   ||   _|     |_   __ \\    |_   __ \\   .' ___  |    |  " << endl;
+    cout << "         |     |   \\/   |       / _ \\     |_/ | | \\_|   | |__| |         | |__) |     | |__) | / .'   \\_|    |  " << endl;
+    cout << "         |     | |\\  /| |      / ___ \\        | |       |  __  |         |  __ /      |  ___/  | |   ____    |" << endl;
+    cout << "         |    _| |_\\/_| |_   _/ /   \\ \\_     _| |_     _| |  | |_       _| |  \\ \\_   _| |_     \\ `.___]  |   |" << endl;
+    cout << "         |   |_____||_____| |____| |____|   |_____|   |____||____|     |____| |___| |_____|     `._____.'    |" << endl;
+    cout << "         |                                                                                                   |\033[0m" << endl;
     cout << endl;
-    cout << "                                              - 1. PLAY" << endl;
-    cout << "                                              - 2. ABOUT US" << endl;
-    cout << "                                              - 3. Exit" << endl;
+    cout << "        \033[104m                                                                                                       \033[0m" << endl;
     cout << endl;
-    cout << "        <=-=================================================================================================-=>" << endl;
+    cout << "\033[1;36m                                      ,--.   ,--. ,------. ,--.  ,--. ,--. ,--.  " << endl;
+    cout << "                                      |   `.'   | |  .---' |  ,'.|  | |  | |  |   " << endl;
+    cout << "                                      |  |'.'|  | |  `--,  |  |' '  | |  | |  |  " << endl;
+    cout << "                                      |  |   |  | |  `---. |  | `   | '  '-'  '  " << endl;
+    cout << "                                      `--'   `--' `------' `--'  `--'  `-----'   \033[0m" << endl;
+
+    cout << "                                    \033[35m_____________________________________________\033[0m " << endl;
+    cout << "                                    \033[35m|                                           |\033[0m" << endl;
+    cout << "                                    \033[35m|           \033[32m - 1. \033[4;32mPLAY\033[0m                      \033[35m|\033[0m" << endl;
+    cout << "                                    \033[35m|           \033[31m - 2. \033[4;31mABOUT US\033[0m                  \033[35m|\033[0m" << endl;
+    cout << "                                    \033[35m|           \033[33m - 3. \033[4;33mLEADERBOARD\033[0m               \033[35m|\033[0m" << endl;
+    cout << "                                    \033[35m|                                           |\033[0m" << endl;
+
+    cout << "        \033[45m                                                                                                       \033[0m" << endl;
     cout << endl;
-    cout << "                                             < | > Choose an option : ";
+
+    cout << "                                             \033[36m< | > Choose an option : \033[0m";
 
     int mainChoose;
     do {
         cin >> mainChoose;
-    } while (mainChoose != 1 && mainChoose != 2 && mainChoose != 3 && mainChoose != 4);
+    } while (mainChoose != 1 && mainChoose != 2 && mainChoose != 3);
 
     switch (mainChoose) {
     case 1: {
         system("CLS");
-        cout << "\n======================================" << endl;
-        cout << "         Choose Your Level           " << endl;
-        cout << "======================================" << endl;
-        cout << "\n1. EASY" << endl;
-        cout << "2. MEDIUM" << endl;
-        cout << "3. HARD" << endl;
-        cout << "4. How To Play" << endl;
-        cout << "5. Return to Main Menu" << endl;
-        cout << "======================================" << endl;
-        cout << "Choose an option: ";
+        cout << endl;
+        cout << "                                \033[42m                                                        \033[0m" << endl;
+        cout << "                                \033[42m  \033[0m                                                    \033[42m  \033[0m" << endl;
+        cout << "                                \033[42m  \033[0m                  \033[1;4;44mCHOOSE YOUR LEVEL:\033[0m                \033[42m  \033[0m" << endl;
+        cout << "                                \033[42m  \033[0m                                                    \033[42m  \033[0m" << endl;
+        cout << "        \033[42m                                                                                                       \033[0m" << endl;
+        cout << endl;
+        cout << endl;
+        cout << "                                                  \033[92;4m- 1. EASY\033[0m        \033[42m   \033[0m" << endl;
+        cout << "                                                  \033[93;4m- 2. MEDIUM\033[0m      \033[43m   \033[0m" << endl;
+        cout << "                                                  \033[91;4m- 3. HARD\033[0m        \033[41m   \033[0m" << endl;
+        cout << endl;
+        cout << "                                                \033[96m(?) 4. How To Play?\033[0m" << endl;
+        cout << endl;
+        cout << "                                                 \033[95m<~ 5. Return to Main Menu\033[0m" << endl;
+        cout << endl;
+        cout << endl;
+        cout << "        \033[42m                                                                                                       \033[0m" << endl;
+        cout << endl;
+        cout << endl;
+        cout << "                                                \033[36m< | > Choose an option : \033[0m";
 
         int gameChoose;
         do {
@@ -532,7 +681,26 @@ mainMenu: {
             goto mainMenu;
         }
         case 4: {
-            cout << "\n*** How to Play Instructions ***\n";
+            system("CLS");
+            cout << endl;
+            cout << endl;
+            cout << "  \033[43m                                     \033[0m  \033[93mThere are only 2 weapons to choose from\033[0m \033[43m                                   \033[0m" << endl;
+            cout << endl;
+            cout << "            \033[90mWill you choose\033[0m" << endl;
+            cout << "                                                   \033[96m-The sword-\033[0m" << endl;
+            cout << "        \033[46m  \033[0m             \033[36mIt's the middle ground weapon, meaning it's neither strong nor weak.\033[0m" << endl;
+            cout << "        \033[46m  \033[0m            \033[36mYou have to answer a simple two digit addition question.\033[0m" << endl;
+            cout << "        \033[46m  \033[0m            \033[36mFor a critical, you will have to multiply two single digit numbers.\033[0m" << endl;
+            cout << "        \033[46m  \033[0m            \033[36mThe critical multiplier is 1.5x.\033[0m" << endl;
+            cout << endl;
+            cout << "            \033[90mOr\033[0m" << endl;
+            cout << "                                                   \033[91m-The mace-\033[0m" << endl;
+            cout << "        \033[41m  \033[0m           \033[31mAs you can probably guess, it's the heavy weapon, meaning it's strong but it is harder to use.\033[0m" << endl;
+            cout << "        \033[41m  \033[0m        \033[31mYou will have to multiply two single digit numbers and it's base damage is the same\033[0m" << endl;
+            cout << "        \033[41m  \033[0m        \033[31mas the sword's critical damage.  " << endl;
+            cout << "        \033[41m  \033[0m        \033[31mAs for a critical, you will have to multiply a double digit number by a single digit number.\033[0m" << endl;
+            cout << "        \033[41m  \033[0m        \033[31mThe critical multiplier is a whopping 4x.\033[0m" << endl;
+            cout << "        \033[41m  \033[0m        \033[31mType r to return to menu.\033[0m" << endl;
             break;
         }
         case 5:
@@ -543,16 +711,29 @@ mainMenu: {
     }
     case 2: {
         system("CLS");
-        cout << "\n======================================" << endl;
-        cout << "              About Us               " << endl;
-        cout << "======================================" << endl;
-        cout << "Our team is comprised of talented individuals:" << endl;
-        cout << "- Martin: Scum Trainer and Leader" << endl;
-        cout << "- Denis: Backend Developer" << endl;
-        cout << "- Stelian: Designer & Frontend Developer" << endl;
-        cout << "- Stanimir: Designer & Tester" << endl;
-        cout << "======================================" << endl;
-        cout << "Type r to return to Main Menu: ";
+        cout << endl;
+        cout << "                                \033[41m                                                        \033[0m" << endl;
+        cout << "                                \033[41m  \033[0m                                                    \033[41m  \033[0m" << endl;
+        cout << "                                \033[41m  \033[0m                      \033[1;4;44mABOUT US:\033[0m                     \033[41m  \033[0m" << endl;
+        cout << "                                \033[41m  \033[0m                                                    \033[41m  \033[0m" << endl;
+        cout << "        \033[41m                                                                                                       \033[0m" << endl;
+        cout << endl;
+        cout << endl;
+        cout << "                                                       \033[96;4mOur team:\033[0m" << endl;
+        cout << endl;
+        cout << "                                           \033[92m- Martin: Scum Trainer and Leader\033[0m " << endl;
+        cout << "                                           \033[93m- Denis: Backend Developer\033[0m  " << endl;
+        cout << "                                           \033[91m- Stelian: Designer(1) & Frontend Developer\033[0m" << endl;
+        cout << "                                           \033[35m- Stanimir: Designer(2) & Tester\033[0m" << endl;
+        cout << endl;
+        cout << "                                                 \033[95m<~ r. Return to Main Menu\033[0m" << endl;
+        cout << endl;
+        cout << endl;
+        cout << "        \033[41m                                                                                                       \033[0m" << endl;
+        cout << endl;
+        cout << endl;
+        cout << "                                                \033[36m< | > Choose an option : \033[0m";
+
         char choose;
         do {
             cin >> choose;
@@ -562,7 +743,36 @@ mainMenu: {
         goto mainMenu;
     }
     case 3: {
-        return 0;
+        system("CLS");
+        cout << endl;
+        cout << "                                \033[43m                                                        \033[0m" << endl;
+        cout << "                                \033[43m  \033[0m                                                    \033[43m  \033[0m" << endl;
+        cout << "                                \033[43m  \033[0m                    \033[1;4;44mLEADERBOARD:\033[0m                    \033[43m  \033[0m" << endl;
+        cout << "                                \033[43m  \033[0m                                                    \033[43m  \033[0m" << endl;
+        cout << "        \033[43m                                                                                                       \033[0m" << endl;
+        cout << endl;
+        cout << endl;
+        cout << "                                                    \033[96;4mTOP 100 PLAYERS:\033[0m" << endl;
+        cout << endl;
+        cout << "                                                     \033[92m No results...\033[0m " << endl;
+        cout << endl;
+        cout << endl;
+        cout << endl;
+        cout << "                                               \033[95m<~ r. Return to Main Menu\033[0m" << endl;
+        cout << endl;
+        cout << endl;
+        cout << "        \033[43m                                                                                                       \033[0m" << endl;
+        cout << endl;
+        cout << endl;
+        cout << "                                                \033[36m< | > Choose an option : \033[0m";
+
+        char choose;
+        do {
+            cin >> choose;
+        } while (choose != 'r');
+
+        system("CLS");
+        goto mainMenu;
     }
     }
     }
