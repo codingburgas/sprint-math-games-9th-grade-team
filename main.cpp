@@ -485,7 +485,7 @@ mainMenu: {
     cout << endl;
     cout << "                                              - 1. PLAY" << endl;
     cout << "                                              - 2. ABOUT US" << endl;
-    cout << "                                              - 3. LEADERBOARD" << endl;
+    cout << "                                              - 3. Exit" << endl;
     cout << endl;
     cout << "        <=-=================================================================================================-=>" << endl;
     cout << endl;
@@ -494,7 +494,7 @@ mainMenu: {
     int mainChoose;
     do {
         cin >> mainChoose;
-    } while (mainChoose != 1 && mainChoose != 2 && mainChoose != 3);
+    } while (mainChoose != 1 && mainChoose != 2 && mainChoose != 3 && mainChoose != 4);
 
     switch (mainChoose) {
     case 1: {
@@ -553,7 +553,6 @@ mainMenu: {
         cout << "- Stanimir: Designer & Tester" << endl;
         cout << "======================================" << endl;
         cout << "Type r to return to Main Menu: ";
-
         char choose;
         do {
             cin >> choose;
@@ -563,21 +562,7 @@ mainMenu: {
         goto mainMenu;
     }
     case 3: {
-        system("CLS");
-        cout << "\n======================================" << endl;
-        cout << "            Leaderboard               " << endl;
-        cout << "======================================" << endl;
-        cout << "Here you will see the top players!" << endl;
-        cout << "======================================" << endl;
-        cout << "Type 5 to return to Main Menu: ";
-
-        char choose;
-        do {
-            cin >> choose;
-        } while (choose != 'r');
-
-        system("CLS");
-        goto mainMenu;
+        return 0;
     }
     }
     }
