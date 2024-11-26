@@ -26,6 +26,5 @@ Welcome to RPG Math Game, an exciting adventure where players enhance their math
 <li><b>⚔Engaging Gameplay:</b> Solve math problems to defeat enemies and progress through waves.</li>
 <li><b>🌊Wave system:</b> Explore various worlds, each with increasing difficulty.</li>
 <li><b>🗡Weapon selection:</b> Choose between different weapons with different abilities.</li>
+<li><b>👑Leaderboard:</b> Try reaching the top of the leaderboard to show everyone how smart you are!</li>
 
-> [!WARNING]
-> # The game is still in "SIGMA" so there may be some bugs!
