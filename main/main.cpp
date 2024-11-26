@@ -5,7 +5,7 @@ using namespace std;
 
 void game(double levelMultiplier) {
     int waveCount = 10;
-    for (int waveCounter = 1; waveCounter < waveCount;) {
+    for (int waveCounter = 1; waveCounter <= waveCount;) {
         double enemyHP = 100 * levelMultiplier, enemyDMG = 99 * levelMultiplier;
         double miniBossHP = enemyHP * 1.5, miniBossDMG = enemyHP * 1.5;
         double finalBossHP = miniBossHP * 2, finalBossDMG = miniBossDMG * 2;
