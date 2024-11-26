@@ -16,20 +16,17 @@ Welcome to RPG Math Game, an exciting adventure where players enhance their math
 
 
 <h1>-About us-</h2>
-
-- **Martin**: Scum Trainer & Leader. 
-- **Denis**: Backend Developer.
-- **Stelian**: Designer & Frontend Developer.
-- **Stanimir**: Designer & Tester.
-
+<li><b><a href="https://github.com/MSYanev23">Martin</a>:</b> Scum Trainer & Leader.</li>
+<li><b><a href="https://github.com/ddzavalishin23">Denis</a>:</b> Backend Developer.</li>
+<li><b><a href="https://github.com/SVPalazov23">Stelian</a>:</b> Designer & Frontend Developer.</li>
+<li><b><a href="https://github.com/SSDragunchev23">Stanimir</a>:</b> Designer & Tester.</li>
 
 <h1>-Features-</h1>
 
-- **⚔Engaging Gameplay**: Solve math problems to defeat enemies and progress through waves. 
-- **🌊Wave system**: Explore various worlds, each with increasing difficulty.
-- **🗡Weapon selection**: Choose between different weapons with different abilities.
-- **👑Leaderboard**: Try reaching the top of the leaderboard to show everyone how smart you are!
-
+<li><b>⚔Engaging Gameplay:</b> Solve math problems to defeat enemies and progress through waves.</li>
+<li><b>🌊Wave system:</b> Explore various worlds, each with increasing difficulty.</li>
+<li><b>🗡Weapon selection:</b> Choose between different weapons with different abilities.</li>
+<li><b>👑Leaderboard:</b> Try reaching the top of the leaderboard to show everyone how smart you are!</li>
 
 > [!WARNING]
 > # The game is still in "BETA" so there may be some bugs!
