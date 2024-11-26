@@ -16,10 +16,10 @@ Welcome to RPG Math Game, an exciting adventure where players enhance their math
 
 
 <h1>-About us-</h2>
-<li><b><a href="https://github.com/MSYanev23">Martin</a>:</b> Scum Trainer & Leader.</li>
-<li><b><a href="https://github.com/ddzavalishin23">Denis</a>:</b> Backend Developer.</li>
-<li><b><a href="https://github.com/SVPalazov23">Stilian</a>:</b> Designer & Frontend Developer.</li>
-<li><b><a href="https://github.com/SSDragunchev23">Stanimir</a>:</b> Designer & Tester.</li>
+<li><b><a href="https://github.com/MSYanev23">Martin:</a></b> Scum Trainer & Leader.</li>
+<li><b><a href="https://github.com/ddzavalishin23">Denis:</a>:</b> Backend Developer.</li>
+<li><b><a href="https://github.com/SVPalazov23">Stilian:</a></b> Designer & Frontend Developer.</li>
+<li><b><a href="https://github.com/SSDragunchev23">Stanimir:</a></b> Designer & Tester.</li>
 
 <h1>-Features-</h1>
 
