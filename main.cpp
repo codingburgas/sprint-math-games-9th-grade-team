@@ -622,6 +622,7 @@ mainMenu: {
     cout << "                                    \033[35m|           \033[32m - 1. \033[4;32mPLAY\033[0m                      \033[35m|\033[0m" << endl;
     cout << "                                    \033[35m|           \033[31m - 2. \033[4;31mABOUT US\033[0m                  \033[35m|\033[0m" << endl;
     cout << "                                    \033[35m|           \033[33m - 3. \033[4;33mLEADERBOARD\033[0m               \033[35m|\033[0m" << endl;
+        cout << "                                \033[35m|           \033[31m - 4. \033[4;31mEXIT\033[0m                      \033[35m|\033[0m" << endl;
     cout << "                                    \033[35m|                                           |\033[0m" << endl;
 
     cout << "        \033[45m                                                                                                       \033[0m" << endl;
@@ -632,7 +633,7 @@ mainMenu: {
     int mainChoose;
     do {
         cin >> mainChoose;
-    } while (mainChoose != 1 && mainChoose != 2 && mainChoose != 3);
+    } while (mainChoose != 1 && mainChoose != 2 && mainChoose != 3 && mainChoose != 4);
 
     switch (mainChoose) {
     case 1: {
@@ -774,6 +775,8 @@ mainMenu: {
         system("CLS");
         goto mainMenu;
     }
+    case 4:{
+        return 0;    
     }
     }
 }
