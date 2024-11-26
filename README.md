@@ -15,7 +15,8 @@
 Welcome to RPG Math Game, an exciting adventure where players enhance their math skills while battling monsters and completing quests! This game combines the elements of role-playing games (RPGs) with fun math challenges that will keep players engaged and learning. </h3>
 
 
-<h1>-About us-</h1>
+<h1>-About us-</h2>
+
 - **Martin**: Scum Trainer & Leader. 
 - **Denis**: Backend Developer.
 - **Stelian**: Designer & Frontend Developer.
